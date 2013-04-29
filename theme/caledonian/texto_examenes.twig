@@ -1,0 +1,52 @@
+{% extends 'layout.twig' %}
+
+{% block contenido %}
+{{ parent() }}
+<article class="pagina">
+	
+		<div class="row">
+		<div class="large-12 columns">
+			<header class="titulo-pagina">
+			<h1>{{ page.title }}</h1>
+			</header>
+			<div class="cuerpo-pagina">
+			{{ page.body }}
+			
+	
+		<div class="row">
+		<div class="large-12 columns">
+			<section class="sub-apartado">
+			<header class="titulo-apartado">
+			{% setcontent examen_cambridge = 'page/examenes-de-cambridge' %}
+			<h2><a href="{{ '/cambridgesessions' }}">{{ examen_cambridge.title }}</a></h2>
+			</header>
+			<div class="cuerpo-sub-apartado">
+			
+			<img src="/theme/caledonian/assets/imagenes/cambridge-crest.svg" class="th radius escudo-universidad hide-for-small"></img>
+			{{ examen_cambridge.body}}
+			</div>			
+			</section>
+		</div>
+		</div>
+
+		<div class="row">
+		<div class="large-12 columns">
+			<section class="sub-apartado">
+			<header class="titulo-apartado">	
+			{% setcontent examen_trinity = 'page/examenes-de-trinity' %}
+			<h2><a href="{{ '/trinitysession/trinity-college-examinations' }}">{{ examen_trinity.title}}</a></h2>
+			</header>
+			
+			<div class="cuerpo-sub-apartado">
+				<img src="/theme/caledonian/assets/imagenes/logo_trinity_college_london.gif" class="th radius escudo-universidad hide-for-small"></img>
+			{{ examen_trinity.body }}
+			</div>
+			</section>
+		</div>
+		</div>
+		</div>
+	</div> 
+	</div>
+	</section>
+<article>
+{% endblock %}

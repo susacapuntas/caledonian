@@ -1,0 +1,25 @@
+<nav class="top-bar">
+    <ul class="title-area">
+        <li class="name"><h1><a href="#">Caledonian</a></h1></li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+        <ul class="right">
+           
+            {% for item in menu %}
+                <li  {% if item.submenu is defined %} class="has-dropdown" {% endif %} >
+                    <a href="{{ item.link }}">{{item.label}}</a>
+                    {% if item.submenu is defined %}
+                        <ul class="dropdown">
+                            {% for item in item.submenu %}
+                                <li><a href="{{ item.link }}">{% if item.label is defined %}{{item.label}}{% endif %}</a></li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+                
+            {% endfor %}
+        </ul>
+    </section>
+</nav>

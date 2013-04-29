@@ -1,0 +1,415 @@
+
+@font-face {
+    font-family: 'langdonregular';
+    src: url('/theme/caledonian/assets/fonts/langdon/langdon-webfont.eot');
+    src: url('/theme/caledonian/assets/fonts/langdon/langdon-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/theme/caledonian/assets/fonts/langdon/langdon-webfont.woff') format('woff'),
+         url('/theme/caledonian/assets/fonts/langdon/langdon-webfont.ttf') format('truetype'),
+         url('/theme/caledonian/assets/fonts/langdon/langdon-webfont.svg#langdonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'dejavu_serifbook';
+    src: url('/theme/caledonian/assets/fonts/dejavu-serif/dejavuserif-webfont.eot');
+    src: url('/theme/caledonian/assets/fonts/dejavu-serif/dejavuserif-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/theme/caledonian/assets/fonts/dejavu-serif/dejavuserif-webfont.woff') format('woff'),
+         url('/theme/caledonian/assets/fonts/dejavu-serif/dejavuserif-webfont.ttf') format('truetype'),
+         url('/theme/caledonian/assets/fonts/dejavu-serif/dejavuserif-webfont.svg#dejavu_serifbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+html{
+	font-size: 110%;
+}
+
+body {
+	line-height: 1.5;
+    font-family: 'PT Sans', sans-serif;
+    color: #333333;
+
+}
+
+#top-band{
+	background-color: #ffffff;
+	margin-bottom: 0px;
+	background: url(/theme/caledonian/assets/imagenes/phone-booth-footer.png) no-repeat center center ; 
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+h1#sitename{
+	font-family: 'langdonregular';
+	font-size: 10rem;
+	margin-bottom: 0rem;
+	color: #ffffff;
+	font-weight: normal;
+	line-height: 1;
+	letter-spacing: 1rem;
+	text-shadow:2px 2px 1px #656565;
+}
+h2#payoff{
+	font-family: 'dejavu_serifbook';
+	font-size: 1.5rem;
+	padding-left: 0.5rem;
+	color: #ffffff;
+	margin-bottom: 0rem;
+	font-weight: normal;
+	line-height: 1;
+}
+
+#wrapper-layout{
+	padding-top: 2rem;
+	padding-bottom: 7rem;
+	position: relative;
+	background-color: #EAEAEA;
+	background: url(/theme/caledonian/assets/imagenes/norwegian_rose.png) repeat; 
+  	box-shadow:2px 2px 4px #454545;
+  	border-bottom: 2px solid #454545;
+}
+/*---
+	Menú de navegación
+---*/
+
+nav.top-bar{
+	margin-bottom: 0rem;
+}
+
+/*---
+	Fin menú de navegación
+---*/
+
+
+/*---
+	Prueba menú de navegación
+---*/
+
+div#barra-menu{
+	background-color: #296087;
+	width: 100%;
+	border-top: 2px solid #cccccc;
+	border-bottom: 2px solid white;
+}
+	/*
+	nav.top-bar{
+		background: #ffffff;
+		font-family: ''PT Sans', sans-serif';
+		font-size: 2rem;
+		font-weight: normal;
+		color: 454545;
+	}
+	*/
+
+	nav.top-bar ul.title-area li.name h1 a,
+	nav.top-bar,
+	nav.top-bar section.top-bar-section ul.right,
+	nav.top-bar section.top-bar-section ul.right > li > a,
+	nav.top-bar section.top-bar-section ul.right ul.dropdown li a
+	{
+		font-family: 'PT Sans', sans-serif;
+		background: #296087;
+		//color: white;
+		font-size: 1rem;
+		color: white;
+	}
+
+	nav.top-bar section.top-bar-section ul.right > li.hasdropdown{
+		border-bottom: none;
+	}
+
+	nav.top-bar section.top-bar-section ul.right ul.dropdown{
+		border: 2px solid white;
+		border-top: none;
+	}
+
+
+/*---
+	Fin prueba menú de navegación
+---*/
+
+
+
+
+
+
+
+	article.pagina{
+	}
+
+	header.titulo-pagina{
+		background-color: #ffffff;
+		position:relative;
+		float:left;
+		margin: 0px;
+		padding: 0 0.5rem 0 0.5rem;
+		border: 1px solid #498BFE;
+		border-radius:2px;
+		box-shadow:2px 2px 3px #454545;
+		z-index: 1;
+	}
+	header.titulo-pagina :before{
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 0px;
+		height: 1rem;
+		width: 1rem;
+		border-top: 1rem solid #4E8CA6 ;
+		border-left: 1rem solid transparent;
+	}
+
+	header.titulo-pagina h1{
+		font-size: 1.5rem;
+		font-weight: normal;
+		margin: 0;
+		color:#4E8CA6;
+	}
+
+	article .cuerpo-pagina{
+		border:2px solid #4E8CA6;
+		position:relative;
+		top: -1rem;
+		left: 1rem;
+		clear: both;
+		padding: 1rem 0.3rem 0 0.5rem;
+		margin: 0 1rem 0 0;
+		margin-right: 1rem;
+		box-shadow:2px 2px 3px #454545;
+		border-radius:4px;
+		background-color: #ffffff;
+	}
+
+/*---
+   Sub-apartado
+---*/
+	section.sub-apartado{
+
+	}
+
+	header.titulo-apartado{
+		background-color: #ffffff;
+		position:relative;
+		float:left;
+		border: 1px solid #498BFE;
+		border-radius:4px;
+		padding: 0.2rem;
+		box-shadow:2px 2px 3px #454545;
+		z-index: 1;
+	}
+
+		header.titulo-apartado h2{
+			font-size: 1rem;
+			font-weight: normal;
+			margin: 0;
+		}
+
+		header.titulo-apartado a{
+			color: #FF6800;
+		}
+
+	.cuerpo-sub-apartado{
+		position:relative;
+		top: -1rem;
+		left: 1rem;
+		clear: both;
+		background-color: #eeeeee;
+		padding: 1rem 0.3rem 0 0.5rem;
+		margin: 0 1.5rem 0 0;
+		border:2px solid #dddddd;
+		border-radius:4px;
+	}
+
+	
+		.cuerpo-sub-apartado img.escudo-universidad{
+			position: realtive;
+			float:right;
+			top: 0.5rem;
+			right: 0.5rem;
+			margin:0 0 1rem 1rem;
+			
+		}
+
+/*---
+   Fin Sub-apartado
+---*/
+
+
+
+
+
+
+
+
+
+
+
+/*---
+   Bloques laterales
+---*/
+article.bloque-lateral ul, article.bloque-lateral ol{
+	list-style: none;
+}
+
+article.bloque-lateral{
+
+}
+
+article.bloque-lateral header.titulo-bloque{
+	background-color: #ffffff;
+	position:relative;
+	float:left;
+	border: 2px solid #4E8CA6;
+	border-radius:4px;
+	padding: 0.2rem;
+	box-shadow:2px 2px 3px #454545;
+	z-index: 1;
+}
+article.bloque-lateral header.titulo-bloque h1{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #4E8CA6;
+	margin: 0;
+	}
+
+article.bloque-lateral .cuerpo-bloque{
+	position:relative;
+	top: -1rem;
+	left: 1rem;
+	clear: both;
+	background-color: #eeeeee;
+	padding: 1rem 0.3rem 0 0.5rem;
+	border:2px solid #4E8CA6;
+	border-radius:4px;
+	box-shadow:2px 2px 3px #454545;
+}
+
+
+/*---
+   Fin bloques laterales
+---*/
+
+
+
+
+
+
+#footer-wrapper{
+	
+	padding-top:2em;
+	padding-bottom:2em;
+	color: #454545;
+	background: url(/theme/caledonian/assets/imagenes/london-tube.svg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	background-color: #B4BFC4;
+  	
+
+  	
+  	
+}
+.bloque-footer{
+	border: 3px solid #dddddd;
+	padding: 1em;
+	margin: 0.3rem;
+	height: 17.8em;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	background-color: #ffffff;
+		filter: alpha(opacity=85);
+		opacity: 0.85;
+		box-shadow:2px 2px 3px #454545;
+}
+
+#map-canvas-wrapper{
+	padding: 5px;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+}
+
+#map-canvas{
+	width:100%;
+	height: 17em;
+}
+
+.vcard{
+	border: none;
+}
+
+
+
+/*---
+Tamaño hasta 48em
+---*/
+
+@media only screen and (max-width: 48em) {
+    body {
+        font-size:90%;
+    }
+	
+	#wrapper-layout{
+		background: none;
+	}
+
+	/*---
+		Prueba menu navegación.
+	---*/
+
+	nav.top-bar,
+	nav.top-bar.expanded ul.title-area,
+	nav.top-bar.expanded section.top-bar-section ul.right li.has-dropdown.moved ul.dropdown
+	{ 
+		background:#296087;
+		color: white;
+		border: none;
+	}
+
+	/*---
+		Fin prueba menu navegación.
+	---*/
+
+
+
+
+
+
+	article.pagina{
+		margin: 0 0.5rem 0 0.5rem;
+	}
+
+	header.titulo-pagina h1{
+		font-size: 1.2rem;
+	}
+
+	section.sub-apartado .cuerpo-sub-apartado{
+		position:relative;
+		top: -1rem;
+		left: 0.5rem;
+		clear: both;
+		padding: 1rem 0.3rem 0 0rem;
+		//margin: 0 1rem 0 0;
+		margin-right: 1rem;
+		background-color: #ffffff;
+		border: none;
+		//z-index: -1;
+	}
+	
+	/*---
+	   Fin Sub-apartado
+	---*/
+
+
+	.bloque-footer{
+		border: none;
+	}
+
+}

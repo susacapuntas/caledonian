@@ -1,0 +1,12 @@
+{% extends 'layout.twig' %}
+
+{% block contenido %}
+{{ parent() }}
+<article>
+<h2>{{page.title}}</h2>
+<hr>
+
+{{page.body}}
+
+<article>
+{% endblock %}

@@ -1,0 +1,449 @@
+# This file defines the contenttypes on the website. See the documentation for
+# details: http://docs.bolt.cm/content#defining-contenttypes
+
+
+# Pages can be used for the more 'static' pages on your site. Things like
+# 'about us', 'contact' or a 'disclaimer'. This content-type has a 'templateselect'
+# field, which allows you to override the record_template setting for an
+# individual page.
+# The taxonomy for this contenttype is defined as 'chapters', which is a so-called
+# "grouping" taxonomy. This way you can easily group sets of pages that logically
+# belong together. If your site has a 'services' section, in which you'd like to
+# list the different types of services a company provides, you can group these
+# together.
+
+#En este contenttype usamos el templateselect, que permite seleccionar la plantilla deseada desde el dashboard
+
+pages:
+    name: Pages
+    singular_name: Page
+    fields:
+        title:
+            type: text
+            class: large
+        slug:
+            type: slug
+            uses: title
+        body:
+            type: html
+            height: 300px
+        template:
+            type: templateselect
+            filter: '*.twig'
+    sort: title
+
+
+#Contenttype para Exámenes
+#Aquí se le asigna una plantilla ya predefinida porque estamos usando record_template y listing_template en lugar
+#de template select como en el caso anterior
+
+exams:
+  name: Exams
+  singular_name: Exam 
+  fields:
+    name:
+      type: text
+      class: large
+    slug:
+      type: slug
+      uses: name
+    annotations:
+      type: html
+      height: 300px
+    examdate:
+      type: datetime
+  taxonomy: [ exams, tags ]
+  record_template: exam.twig
+  listing_template: exam_list.twig
+  listing_records: 10
+  sort: examdate
+  recordsperpage: 10
+
+
+#Contenttype para Bloques laterales (barra lateral)
+
+bloques_laterales:
+  name: BloquesLaterales
+  singular_name: BloqueLateral
+  fields:
+    title:
+      type: text
+      class: large
+    slug:
+      type: slug
+      uses: title
+    text:
+      type: html
+      height: 300px
+  record_template: bloque_lateral.twig
+  listing_template: bloques_laterales.twig
+  listing_records: 10
+  recordsperpage: 10
+
+
+#Tipo de contenido exámenes de Cambridge.
+cambridge_sessions:
+  name: CambridgeSessions
+  singular_name: CambridgeSession
+  fields:
+    title:
+      type: text
+      class: large
+      label: Título
+    slug:
+      type: slug
+      uses: title
+    fechaconvocatoria:
+      type: date
+      label: Convocatoria
+    body:
+      type: html
+      height: 300px
+      label: Texto de introducción:
+    ket_name:
+      type: text
+      class: narrow
+      variant: inline
+      label: Etiqueta K.E.T.
+      prefix: "<hr><h1>K.E.T.</h1>"
+    ket_level:
+      type: text
+      class: narrow
+      variant: inline
+      label: Nivel K.E.T.
+    ket_date:
+      type: date
+      variant: inline
+      label: Fecha K.E.T.
+    ket_price:
+      type: float
+      variant: inline
+      label: Precio K.E.T.
+    ket_annotations:
+      type: textarea
+      height: 150px
+      class: narrow
+      variant: inline
+      label: Observaciones
+      postfix: "<p>Fin KET</p><hr>"
+    pet_name:
+      type: text
+      class: narrow
+      variant: inline
+      label: Etiqueta P.E.T.
+      prefix: "<hr><h1>P.E.T.</h1>"
+    pet_level:
+      type: text
+      class: narrow
+      variant: inline
+      label: Nivel P.E.T.
+    pet_date:
+      type: date
+      class: narrow
+      variant: inline
+      label: Fecha P.E.T.
+    pet_price:
+      type: float
+      class: narrow
+      variant: inline
+      label: Precio P.E.T.
+    pet_annotations:
+      type: textarea
+      height: 150px
+      variant: inline
+      label: Observaciones
+      postfix: "<p>Fin PET</p><hr>"
+    first_name:
+      type: text
+      class: narrow
+      variant: inline
+      label: Etiqueta F.C.E.
+      prefix: "<hr><h1>F.C.E.</h1>"
+    first_level:
+      type: text
+      class: narrow
+      variant: inline
+      label: Nivel F.C.E.
+    first_date:
+      type: date
+      variant: inline
+      label: Fecha F.C.E.
+    first_price:
+      type: float
+      variant: inline
+      label: Precio F.C.E.
+    first_annotations:
+      type: textarea
+      height: 150px
+      variant: inline
+      label: Observaciones
+      postfix: "<p>Fin FCE</p><hr>"
+    advanced_name:
+      type: text
+      class: narrow
+      variant: inline
+      label: Etiqueta C.A.E.
+      prefix: "<hr><h1>C.A.E.</h1>"
+    advanced_level:
+      type: text
+      class: narrow
+      variant: inline
+      label: Nivel C.A.E.
+    advanced_date:
+      type: date
+      variant: inline
+      label: Fecha C.A.E.
+    advanced_price:
+      type: float
+      variant: inline
+      label: Precio C.A.E.
+    advanced_annotations:
+      type: textarea
+      height: 150px
+      variant: inline
+      label: Observaciones
+      postfix: "<p>Fin CAE</p><hr>"
+    proficiency_name:
+      type: text
+      class: narrow
+      variant: inline
+      label: Etiqueta C.P.E.
+      prefix: "<hr><h1>C.P.E.</h1>"
+    proficiency_level:
+      type: text
+      class: narrow
+      variant: inline
+      label: Nivel C.P.E.
+    proficiency_date:
+      type: date
+      variant: inline
+      label: Fecha C.P.E.
+    proficiency_price:
+      type: float
+      variant: inline
+      label: Precio C.P.E.
+    proficiency_annotations:
+      type: textarea
+      height: 150px
+      variant: inline
+      label: Observaciones
+      postfix: "<p>Fin CPE</p><hr>"
+  record_template: cambridge_template.twig
+  listing_template: cambridge_list_template.twig
+  listing_records: 10
+  recordsperpage: 10
+
+
+#Tipo de contenido exámenes de Trinity.
+trinity_sessions:
+  name: TrinitySessions
+  singular_name: TrinitySession
+  fields:
+    title:
+      type: text
+      class: large
+      label: Título
+    slug:
+      type: slug
+      uses: title
+    body:
+      type: html
+      height: 300px
+      label: Texto de introducción
+    nivel1_name:
+      type: text
+      class: narrow
+      label: Etiqueta Nivel 1
+      prefix: "<hr><h1>Nivel 1</h1>"
+    nivel1_date:
+      type: date
+      label: Fecha nivel 1:
+    nivel1_price:
+      type: float
+      label: Precio nivel 1
+    nivel1_annotations:
+      type: textarea
+      height: 150px
+      label: Observaciones nivel 1:
+      postfix: "<p>Fin Nivel 1</p><hr>"
+    nivel2_name:
+      type: text
+      class: narrow
+      label: Etiqueta Nivel 2
+      prefix: "<hr><h1>Nivel 2</h1>"
+    nivel2_date:
+      type: date
+      label: Fecha nivel 2:
+    nivel2_price:
+      type: float
+      label: Precio nivel 2
+    nivel2_annotations:
+      type: textarea
+      height: 150px
+      label: Observaciones nivel 2:
+      postfix: "<p>Fin Nivel 2</p><hr>"
+    nivel3_name:
+      type: text
+      class: narrow
+      label: Etiqueta Nivel 3
+      prefix: "<hr><h1>Nivel 3</h1>"
+    nivel3_date:
+      type: date
+      label: Fecha nivel 3:
+    nivel3_price:
+      type: float
+      label: Precio nivel 3
+    nivel3_annotations:
+      type: textarea
+      height: 150px
+      label: Observaciones nivel 3:
+      postfix: "<p>Fin Nivel 3</p><hr>"
+    nivel4_name:
+      type: text
+      class: narrow
+      label: Etiqueta Nivel 4
+      prefix: "<hr><h1>Nivel 4</h1>"
+    nivel4_date:
+      type: date
+      label: Fecha nivel 4:
+    nivel4_price:
+      type: float
+      label: Precio nivel 4
+    nivel4_annotations:
+      type: textarea
+      height: 150px
+      label: Observaciones nivel 4:
+      postfix: "<p>Fin Nivel 4</p><hr>"
+    nivel5_name:
+      type: text
+      class: narrow
+      label: Etiqueta Nivel 5
+      prefix: "<hr><h1>Nivel 5</h1>"
+    nivel5_date:
+      type: date
+      label: Fecha nivel 5:
+    nivel5_price:
+      type: float
+      label: Precio nivel 5
+    nivel5_annotations:
+      type: textarea
+      height: 150px
+      label: Observaciones nivel 5:
+      postfix: "<p>Fin Nivel 5</p><hr>"
+    nivel6_name:
+      type: text
+      class: narrow
+      label: Etiqueta Nivel 6
+      prefix: "<hr><h1>Nivel 6</h1>"
+    nivel6_date:
+      type: date
+      label: Fecha nivel 6:
+    nivel6_price:
+      type: float
+      label: Precio nivel 6
+    nivel6_annotations:
+      type: textarea
+      height: 150px
+      label: Observaciones nivel 6:
+      postfix: "<p>Fin Nivel 6</p><hr>"
+    nivel7_name:
+      type: text
+      class: narrow
+      label: Etiqueta Nivel 7
+      prefix: "<hr><h1>Nivel 7</h1>"
+    nivel7_date:
+      type: date
+      label: Fecha nivel 7:
+    nivel7_price:
+      type: float
+      label: Precio nivel 7
+    nivel7_annotations:
+      type: textarea
+      height: 150px
+      label: Observaciones nivel 7:
+      postfix: "<p>Fin Nivel 7</p><hr>"
+    nivel8_name:
+      type: text
+      class: narrow
+      label: Etiqueta Nivel 8
+      prefix: "<hr><h1>Nivel 8</h1>"
+    nivel8_date:
+      type: date
+      label: Fecha nivel 8:
+    nivel8_price:
+      type: float
+      label: Precio nivel 8
+    nivel8_annotations:
+      type: textarea
+      height: 150px
+      label: Observaciones nivel 8:
+      postfix: "<p>Fin Nivel 8</p><hr>"
+    nivel9_name:
+      type: text
+      class: narrow
+      label: Etiqueta Nivel 9
+      prefix: "<hr><h1>Nivel 9</h1>"
+    nivel9_date:
+      type: date
+      label: Fecha nivel 9:
+    nivel9_price:
+      type: float
+      label: Precio nivel 9
+    nivel9_annotations:
+      type: textarea
+      height: 150px
+      label: Observaciones nivel 9:
+      postfix: "<p>Fin Nivel 9</p><hr>"
+    nivel10_name:
+      type: text
+      class: narrow
+      label: Etiqueta Nivel 10
+      prefix: "<hr><h1>Nivel 10</h1>"
+    nivel10_date:
+      type: date
+      label: Fecha nivel 10:
+    nivel10_price:
+      type: float
+      label: Precio nivel 10
+    nivel10_annotations:
+      type: textarea
+      height: 150px
+      label: Observaciones nivel 10:
+      postfix: "<p>Fin Nivel 10</p><hr>"
+    nivel11_name:
+      type: text
+      class: narrow
+      label: Etiqueta Nivel 11
+      prefix: "<hr><h1>Nivel 11</h1>"
+    nivel11_date:
+      type: date
+      label: Fecha nivel 11:
+    nivel11_price:
+      type: float
+      label: Precio nivel 11
+    nivel11_annotations:
+      type: textarea
+      height: 150px
+      label: Observaciones nivel 11:
+      postfix: "<p>Fin Nivel 11</p><hr>"
+    nivel12_name:
+      type: text
+      class: narrow
+      label: Etiqueta Nivel 12
+      prefix: "<hr><h1>Nivel 12</h1>"
+    nivel12_date:
+      type: date
+      label: Fecha nivel 12:
+    nivel12_price:
+      type: float
+      label: Precio nivel 12
+    nivel12_annotations:
+      type: textarea
+      height: 150px
+      label: Observaciones nivel 12:
+      postfix: "<p>Fin Nivel 12</p><hr>"
+  record_template: trinity_template.twig
+  listing_template: trinity_template.twig
+  listing_records: 10
+  recordsperpage: 10
+

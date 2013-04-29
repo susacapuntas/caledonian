@@ -1,0 +1,35 @@
+{% block barra_lateral %}
+
+<article class="bloque-lateral">	
+{% setcontent novedades = 'bloquelateral/novedades' %}
+	<header class="titulo-bloque">
+	<h1>{{ novedades.title }}</h1>
+	</header>
+<div class="cuerpo-bloque">
+{{ novedades.text }}
+</div>
+</article>
+
+<article class="bloque-lateral">
+{% setcontent infogeneral = 'bloquelateral/informacion-general' %}
+	
+	<header class="titulo-bloque">
+	<h1>{{ infogeneral.title }}</h1>
+	</header>
+	
+	<div class="cuerpo-bloque">
+		{{ infogeneral.text }}
+	</div>
+</article>
+
+<article class="bloque-lateral">
+{% setcontent direccion = 'bloquelateral/direccion' %}
+<header class="titulo-bloque">
+<h1>{{ direccion.title }}</h1>
+</header>
+<div class="cuerpo-bloque">
+{{ direccion.text }}
+</div>
+</article>
+
+{% endblock %}

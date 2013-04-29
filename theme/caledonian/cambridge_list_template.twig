@@ -1,0 +1,32 @@
+{% extends 'layout.twig' %}
+{% block contenido %}
+    <div class="row">
+    <div class="large-12 columns">
+    {{ parent() }}
+        <article class="pagina">
+            <header class="titulo-pagina">  
+            <h1>Convocatorias exámenes Cambridge</h1>
+            </header>
+            <div class="cuerpo-pagina">
+            {% for convocatoria in cambridgesessions %}
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <th width="75%">Convocatoria</th>
+                        <th width="25%">Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="{{ convocatoria.link }}">{{ convocatoria.title }}</a></td>
+                        <td>{{ convocatoria.fechaconvocatoria | date('m-Y')}}</td>
+                    </tr>
+                <tbody>
+            </table>
+            {% endfor %}
+            </div>
+            <section>
+        {{ pager() }}
+    </div>
+    </div>
+{% endblock %}

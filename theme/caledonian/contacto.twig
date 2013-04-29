@@ -1,0 +1,17 @@
+{% extends 'layout.twig' %}
+
+{% block contenido %}
+{{ parent() }}
+
+<div class="row">
+	<div class="large-12 columns">
+		<article>
+		<header class="titulo-pagina">	
+			<h1>Este es el formulario de contacto.</h1>
+		</header>
+		<hr>
+		{{ simpleform('contact') }}
+		</article>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+# This file defines the menus on the website. See the documentation for
+# details: http://docs.bolt.cm/menus
+
+main:
+  - label: Home
+    title: Página inicio Caledonian.
+    path: homepage
+    class: first
+  - label: Exámenes
+    path: page/examenes-oficiales
+    submenu:
+      - label: Cambridge
+        path: cambridgesessions
+      - label: Trinity
+        path: trinitysessions/trinity-college-examinations
+  - label: Cursos
+    path: page/cursos
+  - label: Contacto
+    path: page/contact
+  - label: Trabajar en Caledonian
+    path: page/work
+    title: Trabajar en Caledonian

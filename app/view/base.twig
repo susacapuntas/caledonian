@@ -1,0 +1,31 @@
+{% include '_header.twig' %}
+
+
+<h1>{{title}}</h1>
+
+{% autoescape false %}
+    {{content}}
+{% endautoescape %}
+
+    {% if form|default(null) %}
+    <form method="post" id="prefill" class="form-horizontal">
+        <div class="control-group">
+
+        <div id="form">
+            <div class="control-group">
+                <div class="info">{{ app.translator.trans('prefill.short_help',{},'infos')|raw }}</div>
+                <div id="form_contenttypes">
+                    {% for key,ctype in contenttypes %}
+                    <label><input type="checkbox" id="form_contenttypes_{{ loop.index0 }}" name="form[contenttypes][]" value="{{ key }}" />{{ ctype }}</label>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {{ form_widget(form._token) }}
+
+        <button type="submit" class="btn btn-primary" ><i class="icon-wrench"></i> {{ __('Prefill database') }}</button>
+    </form>
+    {% endif %}
+
+
+{% include '_footer.twig' %}

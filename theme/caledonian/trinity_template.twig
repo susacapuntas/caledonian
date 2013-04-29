@@ -1,0 +1,115 @@
+{% extends 'layout.twig' %}
+
+{% block contenido %}
+<div class="row">
+<div class="large-12 columns">
+{{ parent() }}
+<article class="pagina">
+  <header class="titulo-pagina"> 
+  <h1>{{trinitysession.title}}</h1>
+  </header>
+  <div class="cuerpo-pagina">
+  {{ trinitysession.body }}
+
+  <table width="100%">
+    <thead>
+      <tr>
+        <th width="20%">Nivel</th>
+        <th width="20%">Matrícula</th>
+        <th width="20%">Fecha examen</th>
+        <th >Notas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ trinitysession.nivel1_name }}</td>
+        <td>{{ trinitysession.nivel1_price | number_format(2, ',' , ' ') }} &#8364;</td>
+        <td>{{ trinitysession.nivel1_date | date("d/m/Y") }}</td>
+        <td>{{ trinitysession.nivel1_annotations }}</td>
+      </tr>
+      
+      <tr>
+        <td>{{ trinitysession.nivel2_name }}</td>
+        <td>{{ trinitysession.nivel2_price | number_format(2, ',' , ' ') }} &#8364;</td>
+        <td>{{ trinitysession.nivel2_date | date("d/m/Y") }}</td>
+        <td>{{ trinitysession.nivel2_annotations }}</td>
+      </tr>
+
+      <tr>
+        <td>{{ trinitysession.nivel3_name }}</td>
+        <td>{{ trinitysession.nivel3_price | number_format(2, ',' , ' ') }} &#8364;</td>
+        <td>{{ trinitysession.nivel3_date | date("d/m/Y") }}</td>
+        <td>{{ trinitysession.nivel3_annotations }}</td>
+      </tr>
+
+      <tr>
+        <td>{{ trinitysession.nivel4_name }}</td>
+        <td>{{ trinitysession.nivel4_price | number_format(2, ',' , ' ') }} &#8364;</td>
+        <td>{{ trinitysession.nivel41_date | date("d/m/Y") }}</td>
+        <td>{{ trinitysession.nivel4_annotations }}</td>
+      </tr>
+
+      <tr>
+        <td>{{ trinitysession.nivel5_name }}</td>
+        <td>{{ trinitysession.nivel5_price | number_format(2, ',' , ' ') }} &#8364;</td>
+        <td>{{ trinitysession.nivel5_date | date("d/m/Y") }}</td>
+        <td>{{ trinitysession.nivel5_annotations }}</td>
+      </tr>
+
+      <tr>
+        <td>{{ trinitysession.nivel6_name }}</td>
+        <td>{{ trinitysession.nivel6_price | number_format(2, ',' , ' ') }} &#8364;</td>
+        <td>{{ trinitysession.nivel6_date | date("d/m/Y") }}</td>
+        <td>{{ trinitysession.nivel6_annotations }}</td>
+      </tr>
+
+      <tr>
+        <td>{{ trinitysession.nivel7_name }}</td>
+        <td>{{ trinitysession.nivel7_price | number_format(2, ',' , ' ') }} &#8364;</td>
+        <td>{{ trinitysession.nivel7_date | date("d/m/Y") }}</td>
+        <td>{{ trinitysession.nivel7_annotations }}</td>
+      </tr>
+
+      <tr>
+        <td>{{ trinitysession.nivel8_name }}</td>
+        <td>{{ trinitysession.nivel8_price | number_format(2, ',' , ' ') }} &#8364;</td>
+        <td>{{ trinitysession.nivel8_date | date("d/m/Y") }}</td>
+        <td>{{ trinitysession.nivel8_annotations }}</td>
+      </tr>
+
+      <tr>
+        <td>{{ trinitysession.nivel9_name }}</td>
+        <td>{{ trinitysession.nivel9_price | number_format(2, ',' , ' ') }} &#8364;</td>
+        <td>{{ trinitysession.nivel9_date | date("d/m/Y") }}</td>
+        <td>{{ trinitysession.nivel9_annotations }}</td>
+      </tr>
+
+      <tr>
+        <td>{{ trinitysession.nivel10_name }}</td>
+        <td>{{ trinitysession.nivel10_price | number_format(2, ',' , ' ') }} &#8364;</td>
+        <td>{{ trinitysession.nivel10_date | date("d/m/Y") }}</td>
+        <td>{{ trinitysession.nivel10_annotations }}</td>
+      </tr>
+
+      <tr>
+        <td>{{ trinitysession.nivel11_name }}</td>
+        <td>{{ trinitysession.nivel11_price | number_format(2, ',' , ' ') }} &#8364;</td>
+        <td>{{ trinitysession.nivel11_date | date("d/m/Y") }}</td>
+        <td>{{ trinitysession.nivel11_annotations }}</td>
+      </tr>
+
+      <tr>
+        <td>{{ trinitysession.nivel12_name }}</td>
+        <td>{{ trinitysession.nivel12_price | number_format(2, ',' , ' ') }} &#8364;</td>
+        <td>{{ trinitysession.nivel12_date | date("d/m/Y") }}</td>
+        <td>{{ trinitysession.nivel12_annotations }}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+</article>
+
+</div>
+</div>
+{% endblock %}
